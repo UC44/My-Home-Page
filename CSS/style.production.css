@@ -1,13 +1,15 @@
-a {
-  color: #ccd7e2;
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: #ccd7e2;
+  background-color: #ccd7e2
+}
+
+body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  font-size: 15px;
-  line-height: 1.3;
 }
 
 a:hover,
@@ -16,11 +18,11 @@ a:focus {
 }
 
 a:visited {
-  color: #22675F
+  color: #22675f;
 }
 
 a:active {
-  color: #22675F;
+  color: #22675f;
 }
 
 input,
@@ -30,11 +32,10 @@ button {
   font-family: system-ui;
 }
 
-.button,
-button {
+.button {
   display: inline-block;
-  background-color: #00f;
-  color: #ffffff;
+  background-color: #00f white;
+  color: #00f white;
   padding: 10px;
   border-radius: 3px;
   border-bottom: 2px solid rgba(0, 0, 0, 3);
@@ -47,9 +48,20 @@ button {
   transition-duration: 0.9s;
 }
 
-.button_secondary {
-  background-color: #e0b354;
-  color: #00f #ffffff #2b2b2b;
+button {
+  display: inline-block;
+  background-color: #00f white;
+  color: #00f white;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid rgba(0, 0, 0, 3);
+  position: relative;
+  -webkit-transition: 0.2s opacity;
+  -o-transition: 0.2s opacity;
+  transition: 0.2s opacity;
+  -webkit-transition-duration: 0.9s;
+  -o-transition-duration: 0.9s;
+  transition-duration: 0.9s;
 }
 
 button:hover,
@@ -58,6 +70,11 @@ button:focus,
 .button:focus {
   cursor: pointer;
   opacity: 0.8;
+}
+
+.button_secondary {
+  background-color: #e0b354;
+  color: #2b2b2b;
 }
 
 .page-header__item {
@@ -90,15 +107,6 @@ button:focus,
   margin: 0 3px;
 }
 
-.grid__item {
-  background-color: #778899;
-  padding: 5px;
-}
-
-.grid__item {
-  display: inline-block;
-}
-
 @supports (display: grid) {
   .grid {
     display: -ms-grid;
@@ -108,6 +116,14 @@ button:focus,
     grid-gap: 20px;
     margin: 0;
   }
+}
+
+.grid__item {
+  display: inline-block;
+  background-color: rgb(170, 189, 208);
+  width: auto;
+  min-height: auto;
+  margin: 0;
 }
 
 .grid__item:last-child {
@@ -136,7 +152,7 @@ button:focus,
 
   @media all and (max-width:500px) {
     .grid__item:last-child {
-      background-color: #778899;
+      background-color: lightslategray;
       grid-column: auto / auto;
       grid-row: auto / auto;
     }
@@ -210,7 +226,7 @@ nav .logo {
   }
 
   100% {
-    fill: #ffeefe;
+    fill: #c9a22d #7d8618 #78b991;
   }
 }
 
@@ -224,7 +240,7 @@ nav .logo {
   }
 
   100% {
-    fill: #ffeefe;
+    fill: #c9a22d #7d8618 #78b991;
   }
 }
 
