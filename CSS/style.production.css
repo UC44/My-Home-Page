@@ -113,15 +113,26 @@ button:focus,
   -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
-  margin: 0;
+  padding: 20px;
+  margin: 20;
 }
 
 .grid__item {
-  display: inline-block;
-  background-color: rgb(161, 182, 205);
+  background-color: lightslategray;
   width: auto;
   min-height: auto;
-  margin: 0;
+  margin: 10;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+h1 {
+  text-align: left;
+  padding: 10;
 }
 
 .grid__item:last-child {
@@ -130,31 +141,6 @@ button:focus,
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   grid-row: 1 / 3;
-}
-
-@media all and (max-width:500px) {
-  .grid {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 10px;
-  }
-}
-
-@media all and (min-width: 500px) and (max-width:750px) {
-  .grid {
-    -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-@media all and (max-width:500px) {
-  .grid__item:last-child {
-    background-color: rgb(159, 191, 223);
-    grid-column: auto;
-    grid-row: auto;
-  }
 }
 
 h1 {
@@ -309,5 +295,31 @@ nav .logo {
   to {
     -webkit-transform: translate(100px, 48px);
     transform: translate(100px, 48px);
+  }
+}
+
+@media all and (max-width:500px) {
+  .grid {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 20px;
+    display: -webkit-box;
+    display: flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+}
+
+@media all and (min-width: 500px) and (max-width:750px) {
+  .grid {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
   }
 }
