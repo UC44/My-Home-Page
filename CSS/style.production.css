@@ -4,15 +4,15 @@
 }
 
 body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
   background-color: #ccd7e2
 }
 
-body {
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
+a:hover {
+  text-decoration: none;
 }
 
-a:hover,
 a:focus {
   text-decoration: none;
 }
@@ -107,20 +107,18 @@ button:focus,
   margin: 0 3px;
 }
 
-@supports (display: grid) {
-  .grid {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
-    margin: 0;
-  }
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  margin: 0;
 }
 
 .grid__item {
   display: inline-block;
-  background-color: rgb(156, 184, 210);
+  background-color: rgb(161, 182, 205);
   width: auto;
   min-height: auto;
   margin: 0;
@@ -142,29 +140,25 @@ button:focus,
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
   }
+}
 
-  @media all and (min-width: 500px) and (max-width:750px) {
-    .grid {
-      -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-    }
-  }
-
-  @media all and (max-width:500px) {
-    .grid__item:last-child {
-      background-color: lightslategray;
-      grid-column: auto / auto;
-      grid-row: auto / auto;
-    }
-  }
-
-  h1 {
-    font-size: 22px;
+@media all and (min-width: 500px) and (max-width:750px) {
+  .grid {
+    -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
-.navigation-list {
-  list-style-type: none;
+@media all and (max-width:500px) {
+  .grid__item:last-child {
+    background-color: rgb(159, 191, 223);
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+h1 {
+  font-size: 22px;
 }
 
 .navigation-list__item--active {
@@ -174,6 +168,7 @@ button:focus,
 .navigation-li {
   display: inline-block;
   margin-left: 15px;
+  list-style-type: none;
 }
 
 nav {
@@ -276,8 +271,8 @@ nav .logo {
 }
 
 .sun {
-  -webkit-animation-duration: 4s;
-  animation-duration: 4s;
+  -webkit-animation-duration: 4s color -change infinte alternate linear;
+  animation-duration: 4s color -change infinte alternate linear;
   -webkit-animation-name: color-change;
   animation-name: color-change;
   -webkit-animation-iteration-count: infinite;
@@ -286,11 +281,6 @@ nav .logo {
   animation-direction: alternate;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
-}
-
-.sun {
-  -webkit-animation: 4s color -change infinte alternate linear;
-  animation: 4s color -change infinte alternate linear;
 }
 
 .cloud-front {
