@@ -304,7 +304,7 @@ nav .logo {
     display: grid;
     grid-gap: 20px;
     display: -webkit-box;
-    display: flexbox;
+    display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
