@@ -1,0 +1,5 @@
+The Issues I will like to fix.
+
+On my About page: All the content should be away from the edge.
+
+On Contact page: The same thing.
